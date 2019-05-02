@@ -1,15 +1,26 @@
+//Kleuren
+
+$kleur_rood: #C0392B;
+$kleur_blauw: #2980B9;
+$kleur_groen: #27AE60;
+
+//CSS
+
 body {
   max-width: 100%;
   font-family: 'Open Sans', sans-serif;
-  font-size: 10px; }
+  font-size: 10px;
+}
 
 h1 {
-  font-size: 4rem; }
+  font-size: 4rem;
+}
 
 .welkom {
   height: 100vh;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+}
 
 .welkom::after {
   content: "";
@@ -21,28 +32,38 @@ h1 {
   z-index: -1;
   background-image: url("../afbeeldingen/test_home.jpg");
   background-size: cover;
-  opacity: 0.1; }
+  opacity: 0.1;
+}
 
 .welkom .content {
-  margin-top: 10vh; }
-  .welkom .content #welkom_logo {
-    margin-bottom: 5vh; }
-  .welkom .content h1 {
-    margin-bottom: 5vh; }
-  .welkom .content p {
+  margin-top: 10vh;
+
+  #welkom_logo {
+    margin-bottom: 5vh;
+  }
+
+  h1 {
+    margin-bottom: 5vh;
+  }
+
+  p {
     font-size: 2rem;
     line-height: 2.5rem;
     width: 50%;
-    margin: 0 auto 10vh auto; }
-  .welkom .content a {
-    background-color: #C0392B;
+    margin: 0 auto 10vh auto;
+  }
+
+  a {
+    background-color: $kleur_rood;
     color: white;
     padding: 20px 50px;
     font-size: 3rem;
     border-radius: 1rem;
-    text-decoration: none; }
+    text-decoration: none;
+  }
+
+}
 
 .welkom .content p span {
-  color: #C0392B; }
-
-/*# sourceMappingURL=style.css.map */
+  color: $kleur_rood;
+}
