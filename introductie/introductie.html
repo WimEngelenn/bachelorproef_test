@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <title>Krachttraining voor beginners</title>
+
+  <!--Importeren stylesheets -->
+
+  <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+
+  <!--Importeren fonts -->
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+  <meta charset="utf-8">
+</head>
+
+<body class="introductie">
+  <main>
+  <div class="content-tekst">
+    <div class="logo">
+    <img id="welkom_logo" src="../public/afbeeldingen/logo_KVB.png">
+  </div>
+
+    <h1>Introductie</h1>
+
+        <p id="slide1" class="zichtbaar">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
+          Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
+          <span class="nextprev" style="flex-direction: row-reverse;">
+            <button style="display: none;" onclick="previous()">Vorige</button>
+          <button onclick="next()">Volgende</button>
+        </span>
+        </p>
+
+        <p id="slide2" class="onzichtbaar">
+           Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
+          <span class="nextprev">
+            <button onclick="previous()">Vorige</button>
+          <button onclick="next()">Volgende</button>
+        </span>
+        </p>
+
+        <p id="slide3" class="onzichtbaar">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
+           Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
+          <span class="nextprev">
+            <button onclick="previous()">Vorige</button>
+          <button style="display: none;" onclick="next()">Volgende</button>
+        </span>
+        </p>
+
+    </div>
+
+  </main>
+
+  <!--Importeren scripts -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="../javascript/index.js"></script>
+
+</body>
+
+</html>

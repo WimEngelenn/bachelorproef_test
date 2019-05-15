@@ -12,58 +12,162 @@ body {
   font-size: 10px;
 }
 
+main {
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  margin-bottom: 100px;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 3.5rem;
 }
 
 .welkom {
-  height: 100vh;
   margin: 0 auto;
   text-align: center;
+
+  .content {
+    margin-top: 10vh;
+
+    #welkom_logo {
+      margin-bottom: 5vh;
+    }
+
+    p {
+      font-size: 3rem;
+      line-height: 4rem;
+      width: 100%;
+      margin: 0 auto 10vh auto;
+    }
+
+    a {
+      background-color: $kleur_rood;
+      color: white;
+      padding: 20px 50px;
+      font-size: 3rem;
+      border-radius: 1rem;
+      text-decoration: none;
+    }
+  }
+
+  ::after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: url("../afbeeldingen/test_home.jpg");
+    background-size: cover;
+    opacity: 0.1;
+  }
 }
 
-.welkom::after {
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  background-image: url("../afbeeldingen/test_home.jpg");
-  background-size: cover;
-  opacity: 0.1;
-}
-
-.welkom .content {
-  margin-top: 10vh;
-
-  #welkom_logo {
-    margin-bottom: 5vh;
-  }
-
-  h1 {
-    margin-bottom: 5vh;
-  }
-
-  p {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    width: 50%;
-    margin: 0 auto 10vh auto;
-  }
-
-  a {
-    background-color: $kleur_rood;
-    color: white;
-    padding: 20px 50px;
-    font-size: 3rem;
-    border-radius: 1rem;
-    text-decoration: none;
-  }
-
-}
 
 .welkom .content p span {
   color: $kleur_rood;
 }
+
+//Introductie-scherm
+
+.introductie {
+    padding: 2.5vh 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    .logo {
+      margin: 0 0 100px 0;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+
+    p {
+      color: white;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    button {
+      display: block;
+      background-color: $kleur_rood;
+      border: none;
+      color: white;
+      padding: 16px 24px;
+      margin-top: 100px;
+      border-radius: 15px;
+    }
+
+  .content-tekst {
+    // border: 2px solid $kleur_rood;
+    border-radius: 20px;
+    padding: 100px 50px;
+    background-color: rgba(0,0,0,0.1);
+    min-height: 95vh;
+
+    p {
+      position: relative;
+      height: 600px;
+    }
+
+    .nextprev {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    }
+
+    ::after {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      background-image: url("../afbeeldingen/test_home.jpg");
+      background-size: cover;
+      opacity: 1;
+    }
+  }
+
+//Tabs
+
+.onzichtbaar {
+  display: none;
+}
+
+.zichtbaar {
+  display: block;
+}
+
+
+  // .footer-red {
+  //   background-color: $kleur_rood;
+  //   height: 200px;
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 0 100px;
+  //
+  //   img {
+  //     max-height: 75px;
+  //   }
+  // }
