@@ -26,7 +26,7 @@ var sliders = [
 
 currentTab = 0;
 
-var sliderPs = document.getElementsByTagName("p");
+var sliderPs = document.getElementById("slide-outer").children;
 
 function next() {
   currentTab++;
@@ -41,6 +41,7 @@ function previous() {
 }
 
 function makeVisible(tabName) {
+  console.log(tabName);
   var slider = document.getElementById(tabName);
   slider.className = "zichtbaar";
 }

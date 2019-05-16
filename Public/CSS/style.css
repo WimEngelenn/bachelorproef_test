@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   max-width: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -11,29 +14,35 @@ h1 {
   font-size: 5rem;
   margin-bottom: 100px; }
 
+h2 {
+  font-size: 2.5rem; }
+
 p {
   font-size: 2rem;
   line-height: 3.5rem; }
 
 .welkom {
-  margin: 0 auto;
-  text-align: center; }
+  padding: 2.5vh 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
   .welkom .content {
-    margin-top: 10vh; }
-    .welkom .content #welkom_logo {
-      margin-bottom: 5vh; }
-    .welkom .content p {
-      font-size: 3rem;
-      line-height: 4rem;
-      width: 100%;
-      margin: 0 auto 10vh auto; }
-    .welkom .content a {
-      background-color: #C0392B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 100px 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    min-height: 95vh; }
+    .welkom .content .logo {
+      margin: 0 0 100px 0;
+      text-align: center; }
+      .welkom .content .logo img {
+        margin: 0 auto;
+        text-align: center; }
+    .welkom .content h1 {
       color: white;
-      padding: 20px 50px;
-      font-size: 3rem;
-      border-radius: 1rem;
-      text-decoration: none; }
+      text-align: center; }
   .welkom ::after {
     content: "";
     top: 0;
@@ -44,7 +53,7 @@ p {
     z-index: -1;
     background-image: url("../afbeeldingen/test_home.jpg");
     background-size: cover;
-    opacity: 0.1; }
+    opacity: 1; }
 
 .welkom .content p span {
   color: #C0392B; }
@@ -64,45 +73,103 @@ p {
     color: white; }
   .introductie h1 {
     color: white; }
-  .introductie button {
-    display: block;
-    background-color: #C0392B;
-    border: none;
-    color: white;
-    padding: 16px 24px;
-    margin-top: 100px;
-    border-radius: 15px; }
-  .introductie .content-tekst {
-    border-radius: 20px;
-    padding: 100px 50px;
-    background-color: rgba(0, 0, 0, 0.1);
-    min-height: 95vh; }
-    .introductie .content-tekst p {
-      position: relative;
-      height: 600px; }
-    .introductie .content-tekst .nextprev {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-  .introductie ::after {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-image: url("../afbeeldingen/test_home.jpg");
-    background-size: cover;
-    opacity: 1; }
 
 .onzichtbaar {
   display: none; }
 
 .zichtbaar {
   display: block; }
+
+header {
+  background-color: white;
+  padding: 2.5vh 50px 2.5vh 50px; }
+  header h1 {
+    margin: 0; }
+
+footer .footer-red {
+  background-color: #C0392B;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 100px; }
+  footer .footer-red .footer-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0; }
+    footer .footer-red .footer-nav li {
+      list-style-type: none; }
+      footer .footer-red .footer-nav li p {
+        color: white; }
+  footer .footer-red img {
+    max-height: 50px; }
+
+.content-with-nav {
+  padding: 2.5vh 50px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.picture-bg ::after {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  opacity: 1; }
+
+.picture-bg.introductie ::after {
+  background-image: url("../afbeeldingen/test_home.jpg"); }
+
+.picture-bg.home ::after {
+  background-image: url("../afbeeldingen/basis_bg.jpg");
+  background-position: center center;
+  opacity: 0.01; }
+
+#back-arrow {
+  max-height: 45px;
+  margin-bottom: 20px; }
+
+.content-inner {
+  border-radius: 20px;
+  padding: 100px 50px; }
+  .content-inner p {
+    display: block; }
+
+.btn-bottom {
+  position: absolute;
+  bottom: 10vh;
+  width: 100%; }
+  .btn-bottom .termen-btn {
+    align-items: center;
+    padding: 0 50px;
+    height: 10vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between; }
+
+.nextprev {
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .nextprev #btn-red {
+    display: block;
+    background-color: #C0392B;
+    border: none;
+    color: white;
+    padding: 16px 24px;
+    margin-top: 100px;
+    border-radius: 15px;
+    font-size: 2rem; }
 
 /*# sourceMappingURL=style.css.map */

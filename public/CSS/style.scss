@@ -6,6 +6,10 @@ $kleur_groen: #27AE60;
 
 //CSS
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -22,37 +26,60 @@ h1 {
   margin-bottom: 100px;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 p {
   font-size: 2rem;
   line-height: 3.5rem;
 }
 
 .welkom {
-  margin: 0 auto;
-  text-align: center;
+  padding: 2.5vh 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 
   .content {
-    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    #welkom_logo {
-      margin-bottom: 5vh;
+    border-radius: 20px;
+    padding: 100px 50px;
+    background-color: rgba(0,0,0,0.1);
+    min-height: 95vh;
+
+    .logo {
+      margin: 0 0 100px 0;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+        text-align: center;
+      }
     }
 
-    p {
-      font-size: 3rem;
-      line-height: 4rem;
-      width: 100%;
-      margin: 0 auto 10vh auto;
-    }
+    // p {
+    //   color: white;
+    //   margin: 0 auto 10vh auto;
+    // }
 
-    a {
-      background-color: $kleur_rood;
+    h1 {
       color: white;
-      padding: 20px 50px;
-      font-size: 3rem;
-      border-radius: 1rem;
-      text-decoration: none;
+      text-align: center;
     }
+
+    // a {
+    //   display: block;
+    //   background-color: $kleur_rood;
+    //   border: none;
+    //   color: white;
+    //   padding: 16px 24px;
+    //   margin-top: 100px;
+    //   border-radius: 15px;
+    // }
   }
 
   ::after {
@@ -65,7 +92,7 @@ p {
     z-index: -1;
     background-image: url("../afbeeldingen/test_home.jpg");
     background-size: cover;
-    opacity: 0.1;
+    opacity: 1;
   }
 }
 
@@ -99,51 +126,6 @@ p {
     h1 {
       color: white;
     }
-
-    button {
-      display: block;
-      background-color: $kleur_rood;
-      border: none;
-      color: white;
-      padding: 16px 24px;
-      margin-top: 100px;
-      border-radius: 15px;
-    }
-
-  .content-tekst {
-    // border: 2px solid $kleur_rood;
-    border-radius: 20px;
-    padding: 100px 50px;
-    background-color: rgba(0,0,0,0.1);
-    min-height: 95vh;
-
-    p {
-      position: relative;
-      height: 600px;
-    }
-
-    .nextprev {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    }
-
-    ::after {
-      content: "";
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-      background-image: url("../afbeeldingen/test_home.jpg");
-      background-size: cover;
-      opacity: 1;
-    }
   }
 
 //Tabs
@@ -156,18 +138,144 @@ p {
   display: block;
 }
 
+//Header
 
-  // .footer-red {
-  //   background-color: $kleur_rood;
-  //   height: 200px;
-  //   width: 100%;
-  //   position: absolute;
-  //   bottom: 0;
-  //   display: flex;
-  //   align-items: center;
-  //   padding: 0 100px;
-  //
-  //   img {
-  //     max-height: 75px;
-  //   }
-  // }
+header {
+  // height: 20vh;
+  background-color: white;
+  padding: 2.5vh 50px 2.5vh 50px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+
+//Footer
+
+footer {
+
+  .footer-red {
+    background-color: $kleur_rood;
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+
+    .footer-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        p {
+          color: white;
+        }
+      }
+    }
+
+    img {
+      max-height: 50px;
+    }
+  }
+}
+
+//Met footer
+
+.content-with-nav {
+  // height: 60vh;
+  padding: 2.5vh 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//Background
+.picture-bg {
+    ::after {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      background-size: cover;
+      opacity: 1;
+    }
+  }
+
+.picture-bg.introductie {
+  ::after {
+    background-image: url("../afbeeldingen/test_home.jpg");
+  }
+}
+
+.picture-bg.home {
+  ::after {
+  background-image: url('../afbeeldingen/basis_bg.jpg');
+  background-position: center center;
+  opacity: 0.01;
+}
+}
+
+//Terug-knop
+#back-arrow {
+  max-height: 45px;
+  margin-bottom: 20px;
+}
+
+
+.content-inner {
+  border-radius: 20px;
+  padding: 100px 50px;
+  // background-color: rgba(0,0,0,0.1);
+  // min-height: 80vh;
+
+    p {
+      display: block;
+  }
+}
+
+.btn-bottom {
+position: absolute;
+bottom: 10vh;
+width: 100%;
+
+.termen-btn {
+  align-items: center;
+  padding: 0 50px;
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+}
+
+//Rode knop terug/volgende
+
+.nextprev {
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  #btn-red {
+    display: block;
+    background-color: $kleur_rood;
+    border: none;
+    color: white;
+    padding: 16px 24px;
+    margin-top: 100px;
+    border-radius: 15px;
+    font-size: 2rem;
+  }
+}

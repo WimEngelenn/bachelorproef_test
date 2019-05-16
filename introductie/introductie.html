@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-  <title>Krachttraining voor beginners</title>
+  <title>Krachttraining voor beginners - Introductie</title>
 
   <!--Importeren stylesheets -->
 
@@ -16,44 +16,50 @@
   <meta charset="utf-8">
 </head>
 
-<body class="introductie">
-  <main>
-  <div class="content-tekst">
+<body>
+  <main class="introductie picture-bg">
+
+  <div class="content-inner">
+
     <div class="logo">
     <img id="welkom_logo" src="../public/afbeeldingen/logo_KVB.png">
   </div>
 
     <h1>Introductie</h1>
-
-        <p id="slide1" class="zichtbaar">
+<div id="slide-outer">
+        <div id="slide1" class="zichtbaar">
+          <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
           Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
           Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
-          <span class="nextprev" style="flex-direction: row-reverse;">
-            <button style="display: none;" onclick="previous()">Vorige</button>
-          <button onclick="next()">Volgende</button>
-        </span>
-        </p>
+</p>
+          <div class="nextprev" style="flex-direction: row-reverse;">
+            <button id="btn-red" style="display: none;" onclick="previous()">Vorige</button>
+          <button id="btn-red" onclick="next()">Volgende</button>
+        </div>
+      </div>
 
-        <p id="slide2" class="onzichtbaar">
+        <div id="slide2" class="onzichtbaar">
+          <p>
            Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
-          <span class="nextprev">
-            <button onclick="previous()">Vorige</button>
-          <button onclick="next()">Volgende</button>
-        </span>
-        </p>
+          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.</p>
+          <div class="nextprev">
+            <button id="btn-red" onclick="previous()">Vorige</button>
+          <button id="btn-red" onclick="next()">Volgende</button>
+        </div>
+      </div>
 
-        <p id="slide3" class="onzichtbaar">
+        <div id="slide3" class="onzichtbaar">
+          <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
            Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
-          <span class="nextprev">
-            <button onclick="previous()">Vorige</button>
-          <button style="display: none;" onclick="next()">Volgende</button>
-        </span>
-        </p>
-
+          Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.</p>
+          <div class="nextprev">
+            <button id="btn-red" onclick="previous()">Vorige</button>
+            <a id="btn-red" href="../home.html">Hoofdmenu</a>
+        </div>
+      </div>
+</div>
     </div>
 
   </main>
