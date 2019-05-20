@@ -6,7 +6,7 @@
 
   <!--Importeren stylesheets -->
 
-  <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
   <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 
   <!--Importeren fonts -->
@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -33,9 +34,10 @@
           Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
           Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.
 </p>
-          <div class="nextprev" style="flex-direction: row-reverse;">
-            <button id="btn-red" style="display: none;" onclick="previous()">Vorige</button>
-          <button id="btn-red" onclick="next()">Volgende</button>
+          <div class="nextprev">
+            <button class="btn-next-prev" id="btn-red" style="visibility: hidden;" onclick="previous()">Vorige</button>
+            <p>1/3</p>
+          <button class="btn-next-prev" id="btn-red" onclick="next()">Volgende</button>
         </div>
       </div>
 
@@ -44,8 +46,9 @@
            Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
           Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.</p>
           <div class="nextprev">
-            <button id="btn-red" onclick="previous()">Vorige</button>
-          <button id="btn-red" onclick="next()">Volgende</button>
+            <button class="btn-next-prev" id="btn-red" onclick="previous()">Vorige</button>
+            <p>2/3</p>
+          <button class="btn-next-prev" id="btn-red" onclick="next()">Volgende</button>
         </div>
       </div>
 
@@ -55,8 +58,9 @@
            Sed nec lacinia nulla, quis varius eros. Interdum et malesuada fames ac ante ipsum primis in faucibus.
           Fusce gravida risus quis dolor tristique pharetra. Suspendisse justo tortor, placerat ut porttitor sed, placerat eget diam.</p>
           <div class="nextprev">
-            <button id="btn-red" onclick="previous()">Vorige</button>
-            <a id="btn-red" href="../home.html">Hoofdmenu</a>
+            <button class="btn-next-prev" id="btn-red" onclick="previous()">Vorige</button>
+            <p>3/3</p>
+            <a class="btn-next-prev" id="btn-red" href="../basis/basis_start.html">Ontdek meer</a>
         </div>
       </div>
 </div>
@@ -65,7 +69,7 @@
   </main>
 
   <!--Importeren scripts -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="../javascript/index.js"></script>
 

@@ -17,6 +17,32 @@ var app = new Vue({
 })
 
 
+
+$(document).ready(function(){
+$(".unlock-btn").click(function(){
+  $("#remove").removeClass("locked");
+  // $("#remove-id").removeClass("warning");
+});
+});
+
+// if($("#remove").hasClass("locked")) {
+//   console.log("true");
+// 	$("btn-blue").click(function() {
+//     console.log("true");
+//     $(".termen-btn").removeClass("warning");
+//   });
+// };
+
+// $(document).ready(function(){
+//   if($("#remove").hasClass("locked")) {
+// $(".termen-btn").click(function(){
+//   console.log('test');
+//   $("#remove-id").addClass("warning");
+// });
+// };
+// });
+
+
 //Tabs
 var sliders = [
   "slide1",
@@ -24,7 +50,7 @@ var sliders = [
   "slide3"
 ]
 
-currentTab = 0;
+var currentTab = 0;
 
 var sliderPs = document.getElementById("slide-outer").children;
 
@@ -51,3 +77,5 @@ function makeInvisible() {
      sliderPs[i].className="onzichtbaar";
   }
 }
+
+//
