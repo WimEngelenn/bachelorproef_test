@@ -1,16 +1,13 @@
 /*
 Kleuren
 */
-
 $kleur_rood: #C0392B;
 $kleur_blauw: #00B4DB;
 $kleur_groen: #27AE60; //CSS
-
 $box-shadow: 2px 9px 12px 1px rgba(0, 0, 0, 0.14);
 /*
 Hoofdelementen
 */
-
 * {
   box-sizing: border-box;
 }
@@ -19,25 +16,33 @@ body {
   max-width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
+  padding-bottom: 10vh;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
 }
 
 main {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 10vh;
+  // padding-bottom: 10vh;
 }
-
 /*
 Titels en tekst
 */
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Raleway', sans-serif;
 }
 
 h1 {
   font-size: 2.5em;
-  margin-bottom: 1rem;
+  line-height: 1.2em;
 }
 
 h2 {
@@ -55,6 +60,11 @@ h4 {
   line-height: 1.2em;
 }
 
+h5 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
 p {
   font-size: 1.4em;
   line-height: 1.65em;
@@ -64,24 +74,21 @@ a {
   text-decoration: none;
   color: black;
 }
-
 /*
 Welkomspagina
 */
-
 .welkom {
   padding: 2.5vh 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
+  margin-bottom: 0;
 
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    // padding: 100px 50px;
-    background-color: rgba(0,0,0,0.1);
+    padding: 0 50px;
+    border: 1px solid #d31027;
     min-height: 95vh;
 
     .logo {
@@ -89,42 +96,26 @@ Welkomspagina
       text-align: center;
 
       img {
-        margin: 0 auto;
-        text-align: center;
         max-height: 250px;
       }
     }
 
     h1 {
-      color: rgb(0,0,0);
       text-align: center;
     }
   }
-
-  // ::after {
-  //   content: "";
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   position: absolute;
-  //   z-index: -1;
-  //   background-image: url("../afbeeldingen/test_home.jpg");
-  //   background-size: cover;
-  //   opacity: 1;
-  // }
 }
 //Introductie-scherm
 
+#header_intro {
+  height: 10vh;
+  background: linear-gradient(to right, #d31027, #ea384d);
+}
+
 .introductie {
-  padding: 2.5vh 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  padding-bottom: 0;
 
   .content-inner {
-    background-color: rgba(0,0,0,0.015);
-    min-height: 95vh;
     padding: 5vh 20px;
 
     #slide-outer > div {
@@ -138,19 +129,9 @@ Welkomspagina
     text-align: center;
 
     img {
-      margin: 0 auto;
-      text-align: center;
       max-height: 100px;
     }
   }
-
-  // p {
-  //   color: white;
-  // }
-
-  // h1 {
-  //   color: white;
-  // }
 }
 //Tabs
 
@@ -174,9 +155,7 @@ header {
     text-align: center;
   }
 }
-
 //Header $kleur_groen
-
 #header-groen {
   background: linear-gradient(to right, #00841A, #378B29);
 }
@@ -188,10 +167,9 @@ header {
 #header-rood {
   background: linear-gradient(to right, #d31027, #ea384d);
 }
-
 //Footer
-
 footer {
+  z-index: 99;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -199,37 +177,37 @@ footer {
   bottom: 0;
   display: flex;
   align-items: center;
-  padding: 0 30px;
 
-    .footer-nav {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+  .footer-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 
-      li {
-        list-style-type: none;
+    li {
+      list-style-type: none;
 
-        div {
-          text-align: center;
-        }
+      div {
+        text-align: center;
+      }
 
-        p {
-          color: white;
-        }
+      p {
+        color: white;
       }
     }
-
-    li:first-child {
-      margin-top: 5px;
-    }
-
-    img {
-      max-height: 22px;
-    }
   }
+
+  li:first-child {
+    margin-top: 5px;
+  }
+
+  img {
+    max-height: 22px;
+  }
+}
 
 #footer-blauw {
   background: linear-gradient(to right, #0083B0, #00B4DB);
@@ -243,43 +221,14 @@ footer {
   background: linear-gradient(to right, #d31027, #ea384d);
 }
 
+#active-tab-footer {
+  margin-top: 5px;
+}
+
 //Met footer
-
 .content-with-nav {
-  background-size: cover;
-  background-repeat: no-repeat;
-  // border-top: 15px solid #0083B0;
 }
 
-//Background
-
-.picture-bg {
-  ::after {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-size: cover;
-    opacity: 1;
-  }
-}
-
-// .picture-bg.introductie {
-//   ::after {
-//     background-image: url("../afbeeldingen/test_home.jpg");
-//   }
-// }
-
-.picture-bg.home {
-  ::after {
-    background-image: url("../afbeeldingen/basis_bg.jpg");
-    background-position: center center;
-    opacity: 0.01;
-  }
-}
 //Terug-knop
 
 #back-arrow {
@@ -289,8 +238,7 @@ footer {
 .content-inner {
   padding: 2.5vh 20px;
   border-radius: 20px;
-  height: 40vh;
-
+  // height: 40vh;
   p {
     display: block;
   }
@@ -326,25 +274,22 @@ footer {
   }
 
   .termen-btn-full {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  padding: 20px 15px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 20px;
-  background-color: white;
-
-  margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
 }
-}
-
 /*
 Vorige/volgende knoppen
 */
+
 .nextprev {
   // margin-top: 100px;
   width: 100%;
@@ -364,33 +309,35 @@ Vorige/volgende knoppen
     text-align: center;
     background-color: white;
   }
-
-  #btn-blue {
-    // background: linear-gradient(to right, #0083B0, #00B4DB);
-    border: 1px solid #0083B0;
-    color: #0083B0;
-  }
-
-  #btn-red {
-    border: 1px solid #d31027;
-    color: 1px solid #d31027;
-    // background: linear-gradient(to bottom, #ed213a, #93291e);
-  }
-
-  #btn-green {
-    // background: linear-gradient(to right, #00841A, #378B29);
-    border: 1px solid #00841A;
-    color: #00841A;
-  }
 }
+
+#btn-blue {
+  // background: linear-gradient(to right, #0083B0, #00B4DB);
+  border: 1px solid #0083B0;
+  // color: #0083B0;
+}
+
+#btn-red {
+  border: 1px solid #d31027;
+  // color: #d31027;
+  // background: linear-gradient(to bottom, #ed213a, #93291e);
+}
+
+#btn-green {
+  // background: linear-gradient(to right, #00841A, #378B29);
+  border: 1px solid #00841A;
+  // color: #00841A;
+}
+
 /*
 Vergrendelde blokken
 */
-.locked {
 
+.locked {
   pointer-events: none;
 
-  .termen-btn, .termen-btn-full {
+  .termen-btn,
+  .termen-btn-full {
     background: url("../afbeeldingen/lock.png");
     background-size: 20px;
     background-repeat: no-repeat;
@@ -403,34 +350,33 @@ Vergrendelde blokken
 }
 
 .warning:before {
-content: "Doorloop eerst de stappen hierboven.";
-display: flex;
-justify-content: center;
-align-items: center;
-top: -35px;
-left: 10px;
-bottom: 0;
-right: 0;
-position: absolute;
-background: rgba(0,0,0,0.9);
-padding: 15px;
-opacity: 1;
-width: 100px;
-height: 30px;
-color: white;
-text-align: center;
-border-radius: 10px;
-font-family: inherit;
-font-size: 11px;
-line-height: 1.6em;
-
-// animation: verdwijn 1s ease 3s forwards;
-  }
-
+  content: "Doorloop eerst de stappen hierboven.";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -35px;
+  left: 10px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: rgba(0,0,0,0.9);
+  padding: 15px;
+  opacity: 1;
+  width: 100px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.6em;
+  // animation: verdwijn 1s ease 3s forwards;
+}
 @keyframes verdwijn {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -452,6 +398,7 @@ line-height: 1.6em;
 /*
 Pagina tips
 */
+
 .tips {
   .content-inner {
     height: 70vh;
@@ -471,6 +418,7 @@ Pagina tips
 /*
 Pagina termen-btn
 */
+
 .termen {
   ul {
     li:nth-child(even) {
@@ -499,28 +447,26 @@ Pagina termen-btn
 }
 
 .termen-info {
-      margin-bottom: 20px;
+  margin-bottom: 20px;
 
-      p {
-        background: white;
-        border-radius: 20px;
-        box-shadow: $box-shadow;
-        padding: 15px;
-        height: calc(100% - 55px);
-        overflow-y: scroll;
-      }
-    }
+  p {
+    background: white;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    padding: 15px;
+    height: calc(100% - 55px);
+    overflow-y: scroll;
+  }
+}
 
 #information-icon {
   max-height: 25px;
   margin-bottom: 10px;
   display: block;
 }
-
 /*
 Pagina voeding
 */
-
 .voeding {
   .btn-bottom {
     a {
@@ -528,11 +474,9 @@ Pagina voeding
     }
   }
 }
-
 /*
 Pagina basis
 */
-
 .basis {
   .btn-bottom {
     a {
@@ -547,4 +491,222 @@ Pagina basis
       border-color: #d31027;
     }
   }
+}
+/*
+Pagina voedingsmiddelen
+*/
+.voeding_extra {
+  .collapse {
+    p {
+      padding: 20px;
+      border: 1px solid lightgray;
+    }
+  }
+}
+
+.collapse {
+  li {
+    padding: 5px 0;
+
+    .collapse-heading {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // margin-bottom: 10px;
+      padding: 50px 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      z-index: 1;
+
+      h3 {
+        color: white;
+        z-index: 2;
+      }
+
+      :after {
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+        background-size: cover;
+        z-index: -1;
+      }
+    }
+
+    .collapse-content {
+      display: none;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      ul {
+        padding: 20px;
+        border: 1px solid lightgray;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+
+    img {
+      max-height: 25px;
+      z-index: 2;
+    }
+  }
+}
+
+.collapsible-active {
+  img {
+    transform: rotate(-90deg);
+  }
+}
+
+#chicken-bg {
+  background-image: url("../afbeeldingen/chicken-bg.jpg");
+}
+
+#pasta-bg {
+  background-image: url("../afbeeldingen/pasta-bg.jpeg");
+}
+
+#avocado-bg {
+  background-image: url("../afbeeldingen/fats-bg.jpeg");
+}
+/*
+Pagina oefeningen per spiergroep
+*/
+.oefeningen-per-spiergroep {
+  .oefeningen-lijst {
+    li {
+      display: grid;
+      grid-template-columns: 40% 40% 20%;
+      align-items: center;
+      padding: 20px;
+
+      img {
+        max-height: 100px;
+        text-align: left;
+      }
+
+      h3 {
+        text-align: left;
+      }
+
+      #forward-btn {
+        max-height: 25px;
+        justify-self: end;
+      }
+    }
+  }
+}
+
+.overzicht-oefeningen {
+  .oefeningen-lijst {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+      border-bottom: 2px solid #d31027;
+
+      #forward-btn {
+        max-height: 25px;
+      }
+
+      h3 {
+        margin-right: 20px;
+      }
+    }
+
+    #last-exercise {
+      border: none;
+    }
+  }
+}
+
+#spier-img {
+  max-height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+Oefeningen detailpagina
+*/
+
+.oefening-detail {
+  .video-container {
+    margin-bottom: 20px;
+  }
+
+  .content-inner {
+    h3 {
+      margin-bottom: 10px;
+    }
+
+  .focus-spier {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+
+  .primaire-spier {
+    border: 1px solid #d31027;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    width: 100px;
+    text-align: center;
+    background-color: white;
+    margin-right: 20px;
+  }
+
+  .secundaire-spier {
+    border: 1px solid #d31027;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 80px;
+    text-align: center;
+    background-color: white;
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: my-awesome-counter;
+    padding-left: 40px;
+    margin-bottom: 30px;
+
+    li {
+      padding: 10px 0;
+      counter-increment: my-awesome-counter;
+      color: black;
+      position: relative;
+    }
+
+    li::before {
+      content: counter(my-awesome-counter);
+      --size: 32px;
+      left: calc(-1 * var(--size) - 10px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background: #d31027;
+      font-weight: bold;
+      position: absolute;
+      color: white;
+      font-size: 1.3em;
+      text-align: center;
+    }
+  }
+}
 }

@@ -16,7 +16,22 @@ var app = new Vue({
   el: '#app',
 })
 
+//Collapsible
 
+var collapsible = document.getElementsByClassName("collapse-heading");
+var teller;
+
+for (teller = 0; teller < collapsible.length; teller++) {
+  collapsible[teller].addEventListener("click", function() {
+    this.classList.toggle("collapsible-active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
 $(document).ready(function(){
 $(".unlock-btn").click(function(){
@@ -77,5 +92,3 @@ function makeInvisible() {
      sliderPs[i].className="onzichtbaar";
   }
 }
-
-//

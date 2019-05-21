@@ -20,12 +20,12 @@
 <body class="voedingsmiddelen">
 
   <header id="header-groen">
-    <img id="back-arrow" src="../public/afbeeldingen/back-arrow.png">
+    <a href="javascript: history.go(-1)">
+    <img id="back-arrow" src="../public/afbeeldingen/back-arrow.png"></a>
     <h1>Wat kan ik eten?</h1>
   </header>
 
   <main class="content-with-nav">
-
     <div class="content-inner">
       <div class="termen-info">
         <img id="information-icon" src="../public/afbeeldingen/information.png">
@@ -34,7 +34,62 @@
         </p>
       </div>
 
-    </div>
+      <ul class="collapse">
+        <li>
+        <div class="collapse-heading"  id="chicken-bg">
+          <h3>Eiwitten</h3>
+          <img src="../public/afbeeldingen/arrow_white_forward.png">
+        </div>
+        <div class="collapse-content">
+          <ul>
+            <li>
+              <h5>Kip</h5>
+              <p>28g. / 100g.</p>
+            </li>
+            <li>
+              <h5>Zalm</h5>
+              <p>20g. / 100g.</p>
+            </li>
+            <li>
+              <h5>Tonijn</h5>
+              <p>29g. / 100g.</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapse-heading" id="pasta-bg">
+          <h3>Koolhydraten</h3>
+          <img src="../public/afbeeldingen/arrow_white_forward.png">
+        </div>
+        <div class="collapse-content">
+          <ul>
+            <li>
+              <h5>Kip</h5>
+              <p>28g. / 100g.</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapse-heading" id="avocado-bg">
+          <h3>Vetten</h3>
+          <img src="../public/afbeeldingen/arrow_white_forward.png">
+        </div>
+        <div class="collapse-content">
+          <ul>
+            <li>
+              <h5>Kip</h5>
+              <p>28g. / 100g.</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+<!--
+    </div> -->
   </main>
 
 
@@ -46,9 +101,9 @@
         </div>
       </li>
       <li><a href="../oefeningen/oefeningen_start.html"><img src="../public/afbeeldingen/oefeningen.png"></a></li>
-      <li>
+      <li id="active-tab-footer">
         <div>
-          <a id="active-tab-footer" href="voeding_start.html"><img src="../public/afbeeldingen/voeding.png"></a>
+          <a href="voeding_start.html"><img src="../public/afbeeldingen/voeding.png"></a>
           <p>Voeding</p>
         </div>
       </li>

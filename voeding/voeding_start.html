@@ -20,7 +20,8 @@
 <body class="voeding">
 
   <header id="header-groen">
-    <img id="back-arrow" style="visibility: hidden;" src="public/afbeeldingen/back-arrow.png">
+    <a style="visibility: hidden;" href="javascript: history.go(-1)">
+    <img id="back-arrow" src="../public/afbeeldingen/back-arrow.png"></a>
     <h1>Voeding</h1>
   </header>
 
@@ -90,9 +91,9 @@
         </div>
       </li>
       <li><a href="../oefeningen/oefeningen_start.html"><img src="../public/afbeeldingen/oefeningen.png"></a></li>
-      <li>
+      <li id="active-tab-footer">
         <div>
-          <a id="active-tab-footer" href="voeding_start.html"><img src="../public/afbeeldingen/voeding.png"></a>
+          <a href="voeding_start.html"><img src="../public/afbeeldingen/voeding.png"></a>
           <p>Voeding</p>
         </div>
       </li>
