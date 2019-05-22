@@ -40,24 +40,6 @@ $(".unlock-btn").click(function(){
 });
 });
 
-// if($("#remove").hasClass("locked")) {
-//   console.log("true");
-// 	$("btn-blue").click(function() {
-//     console.log("true");
-//     $(".termen-btn").removeClass("warning");
-//   });
-// };
-
-// $(document).ready(function(){
-//   if($("#remove").hasClass("locked")) {
-// $(".termen-btn").click(function(){
-//   console.log('test');
-//   $("#remove-id").addClass("warning");
-// });
-// };
-// });
-
-
 //Tabs
 var sliders = [
   "slide1",
